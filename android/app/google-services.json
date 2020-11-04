@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "721019127903",
+    "firebase_url": "https://in-out-board-clone-d9a33.firebaseio.com",
+    "project_id": "in-out-board-clone-d9a33",
+    "storage_bucket": "in-out-board-clone-d9a33.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721019127903:android:e34370fc683b341ee473ea",
+        "android_client_info": {
+          "package_name": "com.aking.in_out_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721019127903-0oh77chtg3ss7kns05efl5boadb51195.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6tkp3mRB1QRqV1CVkmvg6X6jUhM9Rfow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721019127903-0oh77chtg3ss7kns05efl5boadb51195.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
