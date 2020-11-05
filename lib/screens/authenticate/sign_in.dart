@@ -26,9 +26,9 @@ class _SignInState extends State<SignIn> {
     return loading
         ? Loading()
         : Scaffold(
-            backgroundColor: Colors.deepPurple[100],
+            backgroundColor: timberwolf,
             appBar: AppBar(
-              backgroundColor: Colors.deepPurple[400],
+              backgroundColor: deepSpaceSparkle,
               elevation: 0.0,
               title: Text('Sign into In-Out Board'),
               actions: <Widget>[
@@ -36,8 +36,12 @@ class _SignInState extends State<SignIn> {
                     onPressed: () {
                       widget.toggleView();
                     },
-                    icon: Icon(Icons.person),
-                    label: Text('Register'))
+                    icon: Icon(
+                      Icons.person,
+                      color: Colors.white,
+                    ),
+                    label:
+                        Text('Register', style: TextStyle(color: Colors.white)))
               ],
             ),
             body: Container(
@@ -74,7 +78,7 @@ class _SignInState extends State<SignIn> {
                       height: 20.0,
                     ),
                     RaisedButton(
-                      color: Colors.pink[400],
+                      color: Colors.blue[800],
                       child: Text(
                         'Sign in',
                         style: TextStyle(color: Colors.white),

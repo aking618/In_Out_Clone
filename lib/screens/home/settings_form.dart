@@ -32,9 +32,9 @@ class _SettingsFormState extends State<SettingsForm> {
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             UserData userData = snapshot.data;
-            return Form(
-              key: _formKey,
-              child: SingleChildScrollView(
+            return SingleChildScrollView(
+              child: Form(
+                key: _formKey,
                 child: Column(
                   children: <Widget>[
                     Text(
@@ -80,7 +80,7 @@ class _SettingsFormState extends State<SettingsForm> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         RaisedButton(
-                          color: Colors.green[700],
+                          color: cambridgeBlue,
                           child: Text(
                             'Clock In',
                             style: buttonTextStyle,
@@ -89,7 +89,7 @@ class _SettingsFormState extends State<SettingsForm> {
                               setState(() => _currentClockedIn = 'IN'),
                         ),
                         RaisedButton(
-                          color: Colors.red,
+                          color: lightPink,
                           child: Text(
                             'Clock Out',
                             style: buttonTextStyle,
@@ -101,7 +101,7 @@ class _SettingsFormState extends State<SettingsForm> {
                     ),
                     SizedBox(height: 20.0),
                     RaisedButton(
-                      color: Colors.pink[400],
+                      color: Colors.blue[800],
                       child: Text(
                         'Update',
                         style: buttonTextStyle,

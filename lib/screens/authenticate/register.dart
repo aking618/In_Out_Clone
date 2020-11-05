@@ -26,9 +26,9 @@ class _RegisterState extends State<Register> {
     return loading
         ? Loading()
         : Scaffold(
-            backgroundColor: Colors.deepPurple[100],
+            backgroundColor: timberwolf,
             appBar: AppBar(
-              backgroundColor: Colors.deepPurple[400],
+              backgroundColor: deepSpaceSparkle,
               elevation: 0.0,
               title: Text('Register for In-Out Board'),
               actions: <Widget>[
@@ -36,8 +36,12 @@ class _RegisterState extends State<Register> {
                     onPressed: () {
                       widget.toggleView();
                     },
-                    icon: Icon(Icons.person),
-                    label: Text('Sign Up'))
+                    icon: Icon(
+                      Icons.person,
+                      color: Colors.white,
+                    ),
+                    label:
+                        Text('Sign Up', style: TextStyle(color: Colors.white)))
               ],
             ),
             body: Container(
@@ -74,7 +78,7 @@ class _RegisterState extends State<Register> {
                       height: 20.0,
                     ),
                     RaisedButton(
-                      color: Colors.pink[400],
+                      color: Colors.blue[800],
                       child: Text(
                         'Register',
                         style: TextStyle(color: Colors.white),
@@ -82,11 +86,11 @@ class _RegisterState extends State<Register> {
                       onPressed: () async {
                         if (_formKey.currentState.validate()) {
                           setState(() => loading = true);
-                          dynamic result = await _auth
+                          String result = await _auth
                               .registerWithEmailAndPassword(email, password);
-                          if (result == null) {
+                          if (result != 'Success!') {
                             setState(() {
-                              error = 'Please supply a valid email';
+                              error = result;
                               loading = false;
                             });
                           }

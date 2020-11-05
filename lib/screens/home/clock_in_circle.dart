@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:in_out_clone/models/employee.dart';
+import 'package:in_out_clone/shared/constants.dart';
 
 class ClockInCircle extends StatelessWidget {
   ClockInCircle({this.employee});
@@ -8,8 +9,7 @@ class ClockInCircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      backgroundColor:
-          employee.clockedIn == 'IN' ? Colors.green[700] : Colors.red,
+      backgroundColor: employee.clockedIn == 'IN' ? cambridgeBlue : lightPink,
       radius: 25.0,
       child: Text(
         employee.clockedIn,

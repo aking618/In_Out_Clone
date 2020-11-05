@@ -4,6 +4,7 @@ import 'package:in_out_clone/screens/home/employee_list.dart';
 import 'package:in_out_clone/screens/home/settings_form.dart';
 import 'package:in_out_clone/services/auth.dart';
 import 'package:in_out_clone/services/database.dart';
+import 'package:in_out_clone/shared/constants.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatelessWidget {
@@ -13,11 +14,16 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     void _showSettingsPanel() {
       showModalBottomSheet(
+          isScrollControlled: true,
           context: context,
           builder: (context) {
-            return Container(
-              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
-              child: SettingsForm(),
+            return FractionallySizedBox(
+              heightFactor: 0.75,
+              child: Container(
+                color: timberwolf,
+                padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
+                child: SettingsForm(),
+              ),
             );
           });
     }
@@ -26,23 +32,35 @@ class Home extends StatelessWidget {
       initialData: [],
       value: DatabaseService().employees,
       child: Scaffold(
-        backgroundColor: Colors.deepPurple[50],
+        backgroundColor: timberwolf,
         appBar: AppBar(
           title: Text('In-Out Board'),
-          backgroundColor: Colors.deepPurple[400],
+          backgroundColor: deepSpaceSparkle,
           elevation: 0.0,
           actions: <Widget>[
             FlatButton.icon(
-              icon: Icon(Icons.person),
+              icon: Icon(
+                Icons.person,
+                color: Colors.white,
+              ),
               onPressed: () async {
                 await _auth.signOut();
               },
-              label: Text('Logout'),
+              label: Text(
+                'Logout',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
             FlatButton.icon(
-              icon: Icon(Icons.settings),
+              icon: Icon(
+                Icons.settings,
+                color: Colors.white,
+              ),
               onPressed: () => _showSettingsPanel(),
-              label: Text('Settings'),
+              label: Text(
+                'Settings',
+                style: TextStyle(color: Colors.white),
+              ),
             )
           ],
         ),

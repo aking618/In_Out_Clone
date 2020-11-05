@@ -7,9 +7,15 @@ const textInputDecoration = InputDecoration(
     borderSide: BorderSide(color: Colors.white, width: 2.0),
   ),
   focusedBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Colors.pink, width: 2.0),
+    borderSide: BorderSide(color: deepSpaceSparkle, width: 2.0),
   ),
 );
+
+const Color lightPink = Color.fromRGBO(237, 175, 184, 1.0);
+const Color champagnePink = Color.fromRGBO(247, 225, 215, 1.0);
+const Color timberwolf = Color.fromRGBO(246, 246, 243, 1.0);
+const Color cambridgeBlue = Color.fromRGBO(176, 196, 177, 1.0);
+const Color deepSpaceSparkle = Color.fromRGBO(74, 87, 89, 1.0);
 
 const buttonTextStyle = TextStyle(color: Colors.white, fontSize: 20.0);
 
